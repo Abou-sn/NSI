@@ -82,8 +82,44 @@ def intToBin(n):
 
     return binaire
 
-# Exo 1 sujet n°12
+# Exo 1 sujet 9
 
+def multiplication(n1,n2):
+    resultat = 0
+    if n1 >0 or n2> 0:
+        for i in range(n2):
+            resultat+=n1
+    elif n1<0 and n2<0:
+        for i in range (abs(n2)):
+            resultat += abs(n1)
+    return resultat
+
+# Exo 2 sujet 9
+
+def dichotomie(tab, x):
+    """
+    tab : tableau d'entiers trié dans l'ordre croissant
+    x : nombre entier
+    La fonction renvoie True si tab contient x et False sinon
+    """
+    debut = 0
+    fin = len(tab) - 1
+    while debut <= fin:
+        m = (debut+fin)//2 
+        if x == tab[m]:
+            return True 
+        if x > tab[m]:
+            debut = m + 1
+        else:
+            fin = m-1 
+    return False 
+
+l =[i*2 for i in range(10)]
+
+print(dichotomie(l,2))
+
+
+# Exo 1 sujet n°12
 def fusion (l1,l2) :
 
     listeA=[]
