@@ -138,5 +138,4 @@ def separe(tab):
             tab[droite] = 1 
             droite = droite-1 
     return tab
-tab = [0,0,1,1,0,0,1,1,1,0,1]
-print(separe(tab))
+
