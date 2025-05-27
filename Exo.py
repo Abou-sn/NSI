@@ -82,7 +82,7 @@ def intToBin(n):
 
     return binaire
 
-# Exo 1 sujet 9
+# Exo 1 sujet n°09
 
 def multiplication(n1,n2):
     resultat = 0
@@ -94,7 +94,7 @@ def multiplication(n1,n2):
             resultat += abs(n1)
     return resultat
 
-# Exo 2 sujet 9
+# Exo 2 sujet n°09
 
 def dichotomie(tab, x):
     """
@@ -113,11 +113,6 @@ def dichotomie(tab, x):
         else:
             fin = m-1 
     return False 
-
-l =[i*2 for i in range(10)]
-
-print(dichotomie(l,2))
-
 
 # Exo 1 sujet n°12
 def fusion (l1,l2) :
@@ -150,7 +145,7 @@ def traduire_romain(nombre):
     else:
         return traduire_romain(nombre[1:])-romains[nombre[0]] 
 
-# Exo 1 sujet 19
+# Exo 1 sujet n°19
 
 def recherche_min(tab):
     min = tab[0]
@@ -161,7 +156,8 @@ def recherche_min(tab):
             ind_min = i
     return ind_min
 
-# Exo 2 sujet 19 
+# Exo 2 sujet n°19 
+
 def separe(tab):
     '''Separe les 0 et les 1 dans le tableau tab'''
     gauche = 0
@@ -174,4 +170,35 @@ def separe(tab):
             tab[droite] = 1 
             droite = droite-1 
     return tab
+
+# Exo 1 sujet n°48
+
+def recherche(tab,n):
+
+    ind = 0
+    for i in range(len(tab)):
+        if n == tab[i]:
+            ind = i
+        elif n not in tab :
+            return None
+    return ind
+
+# Exo 2 sujet n°48
+
+def distance_carre(point1, point2):
+    """ Calcule et renvoie la distance au carre entre 
+    deux points."""
+    return (point1[0]-point2[0])**2 + (point1[1]-point2[1])**2 
+
+def point_le_plus_proche(depart, tab):
+    """ Renvoie les coordonnées du premier point du tableau tab se 
+    trouvant à la plus courte distance du point depart."""
+    min_point = tab[0]
+    min_dist = ... 
+    for i in range(1, len(tab)):
+        if distance_carre(tab[i], depart) < ...: 
+            min_point = ... 
+            min_dist = ... 
+    return min_point
+
 
