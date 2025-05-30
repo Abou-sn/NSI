@@ -171,6 +171,20 @@ def separe(tab):
             droite = droite-1 
     return tab
 
+# Exo 1 sujet 34
+def tri_selection(tab):
+    n = len(tab)
+    for i in range(n-1):
+        pmin = i
+        for j in range(i+1,n):
+            if tab[j]<tab[pmin]:
+                tab[j],tab[pmin] = tab[pmin],tab[j]
+    return tab
+
+tab = [4,2,1,3,1,5,7]
+
+print(tri_selection(tab))
+
 # Exo 1 sujet n°48
 
 def recherche(tab,n):
@@ -199,4 +213,3 @@ def point_le_plus_proche(depart, tab):
             min_point = tab[i]
             min_dist = distance_carre(tab[i], depart)
     return min_point
-
