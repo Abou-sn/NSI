@@ -173,7 +173,49 @@ def separe(tab):
             droite = droite-1 
     return tab
 
-# Exo 1 sujet 34
+# Exo 1 sujet n°32
+
+def occurence(caractere, chaine):
+    cpt = 0
+    for c in chaine :
+        if c == caractere :
+            cpt+=1
+    return cpt
+
+# Exo 2 sujet n°32
+
+valeurs = [100, 50, 20, 10, 5, 2, 1]
+
+def rendu_glouton(a_rendre, rang):
+    if a_rendre == 0:
+        return []
+    v = valeurs[rang]
+    if v <= a_rendre: 
+        return [v] + rendu_glouton(a_rendre - v, rang) 
+    else:
+        return rendu_glouton(a_rendre, rang+1)
+
+# Exo 1 sujet n°33 
+def insertion_abr(arbre,cle):
+    if arbre is None :
+        return (None,cle,None)
+    if cle > arbre[1]:
+        return (arbre[0],arbre[1],insertion_abr(arbre[2],cle))
+    elif cle < arbre[1] :
+        return (insertion_abr(arbre[0],cle),arbre[1],arbre[2])
+    else :
+        return arbre
+n0 = (None, 0, None)
+n3 = (None, 3, None)
+n2 = (None, 2, n3)
+abr1 = (n0, 1, n2)
+
+print (insertion_abr(abr1, 4))
+print( insertion_abr(abr1, -5))
+print (insertion_abr(abr1, 2))
+
+# Exo 1 sujet n°34
+
 def tri_selection(tab):
     n = len(tab)
     for i in range(n-1):
@@ -204,8 +246,6 @@ def plus_ou_moins():
         print("Nombre d'essais: ", compteur) 
     else:
         print ("Perdu ! Le nombre était ", nb_mystere) 
-plus_ou_moins()
-
 
 # Exo 1 sujet n°48
 
