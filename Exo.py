@@ -175,8 +175,21 @@ def separe(tab):
 
 # Exo 1 sujet n°26
 
-def ajoute_dictionnaires(d1;d2):
-    
+def ajoute_dictionnaires(d1,d2):
+    d3 = dict()
+    for cle1,v1 in d1.items() :
+        d3.update({cle1 : v1})
+    for cle2,v2 in d2.items() :
+        if cle2 not in d3 :       
+            d3.update({cle2 : v2})
+        else :
+            d3.update({cle2 : v2})
+            d3[cle2]=d1[cle2]+d2[cle2]
+    return d3
+
+# Exo2 sujet n°26
+
+
 
 # Exo 1 sujet n°32
 
