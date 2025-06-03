@@ -173,6 +173,11 @@ def separe(tab):
             droite = droite-1 
     return tab
 
+# Exo 1 sujet n°26
+
+def ajoute_dictionnaires(d1;d2):
+    
+
 # Exo 1 sujet n°32
 
 def occurence(caractere, chaine):
@@ -205,14 +210,24 @@ def insertion_abr(arbre,cle):
         return (insertion_abr(arbre[0],cle),arbre[1],arbre[2])
     else :
         return arbre
-n0 = (None, 0, None)
-n3 = (None, 3, None)
-n2 = (None, 2, n3)
-abr1 = (n0, 1, n2)
 
-print (insertion_abr(abr1, 4))
-print( insertion_abr(abr1, -5))
-print (insertion_abr(abr1, 2))
+# Exo 2 sujet n°33
+
+def empaqueter(liste_masses, c):
+    """Renvoie le nombre minimal de boites nécessaires pour
+    empaqueter les objets de la liste liste_masses, sachant
+    que chaque boite peut contenir au maximum c kilogrammes"""
+    n = len(liste_masses)
+    nb_boites = 0
+    boites = [ 0 for _ in range(n) ]
+    for masse in liste_masses: 
+        i = 0
+        while i < nb_boites and boites[i] + masse > c: 
+            i = i + 1
+        if i == nb_boites:
+            nb_boites+=1
+        boites[i] += masse 
+    return nb_boites
 
 # Exo 1 sujet n°34
 
@@ -224,8 +239,6 @@ def tri_selection(tab):
             if tab[j]<tab[pmin]:
                 tab[j],tab[pmin] = tab[pmin],tab[j]
     return tab
-
-tab = [4,2,1,3,1,5,7]
 
 # Exo 2 sujet 34
 
