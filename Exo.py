@@ -272,6 +272,14 @@ def plus_ou_moins():
         print("Nombre d'essais: ", compteur) 
     else:
         print ("Perdu ! Le nombre était ", nb_mystere) 
+# Exo 1 sujet n°41 
+
+def ou_exclusif(tab0,tab1):
+    n = len(tab0)
+    final_tab = []
+    for i in range(n):
+        final_tab.append(tab0[i]^tab1[i])
+
 
 # Exo 1 sujet n°48
 
