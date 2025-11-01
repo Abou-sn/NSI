@@ -309,3 +309,9 @@ def point_le_plus_proche(depart, tab):
             min_point = tab[i]
             min_dist = distance_carre(tab[i], depart)
     return min_point
+
+def hello():
+    print("Hello, world!")
+
+
+hello()
