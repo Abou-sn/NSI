@@ -193,7 +193,7 @@ def ajoute_dictionnaires(d1,d2):
 
 # Exo 1 sujet n°32
 
-def occurence(caractere, chaine):
+def occurrence(caractere, chaine):
     cpt = 0
     for c in chaine :
         if c == caractere :
